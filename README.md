@@ -11,7 +11,8 @@ Older as well as newer versions could also be added in a similar way and you can
 
 ## Usage
 
-**Prerequisite**: you need to install [`docker`](https://docs.docker.com/get-docker/).
+**Prerequisite**: you need to install [`docker`](https://www.docker.com/) and start a docker daemon (`dockerd`) locally to be able to use the ASPEN docker image.
+The simplest way would be to install `Docker Desktop` (on MacOS also possible via `brew install --cask docker`) and open the application before executing any docker command.
 
 The name of the image is `ghcr.io/atmdrops/aspenqc`.
 
@@ -26,8 +27,10 @@ cat D20240730_100114.1 | docker run --rm -i ghcr.io/atmdrops/aspenqc
 ```
 
 You can add a tag a the end to point to a specific version, e.g. `4.0.2` or `latest`.
-For an overview of available versions/tags, have a look here: https://github.com/atmdrops/aspenqc/pkgs/container/aspenqc
-`cat D20240730_100114.1 | docker run --rm -i ghcr.io/atmdrops/aspenqc:4.0.2`
+For an overview of available versions/tags, have a look [here](https://github.com/atmdrops/aspenqc/pkgs/container/aspenqc).
+```
+cat D20240730_100114.1 | docker run --rm -i ghcr.io/atmdrops/aspenqc:4.0.2
+```
 
 ### Generating a Level_1 netCDF files
 The idea of docker is that you can run software detached from you local operating system.
